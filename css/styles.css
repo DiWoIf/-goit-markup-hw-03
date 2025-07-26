@@ -2,16 +2,59 @@ body {
     font-family: "Roboto", sans-serif;
     color: #434455;
     background-color: #ffffff;
-
 }
 
 ul,
 ol {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
 }
 
 a {
     text-decoration: none;  
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 120px 0;
+}
+
+/* header */
+
+.page-header {
+    border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .logo-web {
@@ -24,6 +67,11 @@ a {
     color: #4d5ae5;
 }
 
+.header-logo {
+    padding: 24px 0;
+    margin-right: 76px;
+}
+
 .span-header {
     color:#2e2f42;
 }
@@ -34,22 +82,33 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    padding: 24px 0;
+    display: block;
 }
 
 .menu:hover, .menu:focus {
 color: #404BBF;
 }
 
-.address {
+.contacts {
     font-style: normal;
+    margin-left: auto;
 }
 
-.contacts {
+.contacts-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.contacts-link {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    font-style: normal
+    font-style: normal;
+    display: block;
+    padding: 24px 0;
 }
 
 .contacts:hover, .contacts:focus {
@@ -58,6 +117,15 @@ color: #404BBF;
 
 button {
     cursor: pointer; 
+}
+
+ /* hero section */
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .hero {
@@ -71,6 +139,8 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #FFFFFF;
+    padding-bottom: 48px;
+
 }
 
 .button {
@@ -81,10 +151,32 @@ button {
     letter-spacing: 0.04em;
     color: #FFFFFF;
     background-color: #4D5AE5;
+    border-radius: 4px;
+    padding: 16px 32px
 }
 
 .button:focus, .button:hover {
     background-color: #404BBF;
+}
+
+/* feature */
+
+.visually-hidden {
+    position: absolute;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    width: 1px;
+}
+
+.feature-container {
+    display: flex;
+    gap: 24px;
 }
 
 .feature-list {
@@ -103,24 +195,49 @@ button {
     color: #434455;
 }
 
+/* Team section */
+
 .team-section {
-    background: #F4F4FD;
+    background: #f4f4fd;
+    
+}
+
+.team-card {
+    display: flex;
+    gap: 24px;
 }
 
 .team-main {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
     text-transform: capitalize;
     color: #2e2f42; 
+    margin-bottom: 72px;
 }
 
 
 .team-list {
     background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    border-radius: 0 0 4px 4px;
+    padding: 0px 0px 32px 0px;
 }
+
+.team-about {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+}
+
 .team-dev {
     font-weight: 500;
     font-size: 20px;
@@ -140,6 +257,24 @@ button {
     text-align: center;
 }
 
+/* portfolio */
+
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.portfolio-container-list {
+    width: calc((100% - 48px) / 3);
+    display: flex;
+    flex-direction: column
+}
+
+        
+
 .portfolio-main {
     font-weight: 700;
     font-size: 36px;
@@ -148,10 +283,18 @@ button {
     color: #2e2f42;
     text-transform: capitalize;
     text-align: center;
+    margin-bottom: 72px;
 }
 
-.portfolio-img {
-    background-color: #FFFFFF;
+.portfolio-about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;       
+    padding: 32px 16px;
+    border-bottom: 1px solid #e7e9fc;
+    border-left: 1px solid #e7e9fc;
+    border-right: 1px solid #e7e9fc;    
 }
 
 .portfolio-list {
@@ -171,6 +314,15 @@ button {
 
 .footer {
     background-color: #2e2f42;
+    
+}
+
+.footer-container {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    padding: 100px 0;
+    
 }
 
 .span-footer {
